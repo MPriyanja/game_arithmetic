@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="tutorialWebApp"> <!--<![endif]-->
+<head>
+
+    <!-- Meta-Information -->
+    <title>Game</title>
+    
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='css/nprogress.css' rel='stylesheet' />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Our Website Javascripts -->
+    <style type="text/css">
+      i.icon-red {
+          color: red ;
+      }
+      i.icon-green {
+          color: green;
+      }
+    </style>
+      
+    <!--<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>-->
+
+</head>
+<body >
+    <script src="js/angular.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>-->
+      
+    
+    
+    <script src="js/angular-route.min.js"></script>
+
+    <script src='js/nprogress.js'></script>
+    <script src="js/main.js"></script>
+
+    
+<div ng-include='"templates/header.html"'></div>
+<div ng-view></div>
+<div ng-include='"templates/footer.html"'></div>
+
+<!-- Vendor: Javascripts -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/materialize.min.js"></script>
+
+
+<!-- Vendor: Angular, followed by our custom Javascripts -->
+  <script>
+    $('body').show();
+    $('.version').text(NProgress.version);
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+
+    $("#b-0").click(function() { NProgress.start(); });
+    $("#b-40").click(function() { NProgress.set(0.4); });
+    $("#b-inc").click(function() { NProgress.inc(); });
+    $("#b-100").click(function() { NProgress.done(); });
+  </script>
+</body>
+</html>
