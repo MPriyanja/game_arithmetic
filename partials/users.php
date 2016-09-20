@@ -71,16 +71,12 @@
 
               </div>
               
-            </div><!--new user modal end-->
-
-
+            </div><!--end of the new user modal end-->
         <div class="input-field">   
           <i class="material-icons prefix">search</i>                     
           <input name="search" ng-model="search" id="search" type="text">
           <label for="search">Search</label>
         </div>  
-
-
       </div><!--small container end-->
       <div class="col s12 m9">
           <table class="highlight bordered">
@@ -174,6 +170,6 @@
                         </div>
                     </form>
               </div>
-            </div><!--modal end-->
+            </div><!--end of the modal end-->
       </div><!--big grid end-->
 </div>
